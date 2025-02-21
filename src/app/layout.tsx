@@ -53,7 +53,7 @@ export default function RootLayout({
           href='https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:wght@100..900&display=swap'
         />
       </head>
-      <body className='font-mulish'
+      <body className='font-mulish font-600'
       >
         <StoreProvider>
           <Toaster position='top-center' />

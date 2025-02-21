@@ -109,7 +109,7 @@ const DashboardPage = () => {
             <input type='file' id='resume-mobile-upload' className='hidden' onChange={handleFileChange} />
             <label
               htmlFor='resume-mobile-upload'
-              className='w-full p-2 bg-ankerblue text-white font-semibold border-none cursor-pointer rounded-md text-center'
+              className='w-full p-2 bg-ankerblue text-white font-semibold border-none cursor-pointer rounded-md text-center hover:scale-95 duration-200'
               onClick={(e) => e.stopPropagation()}
             >
               {userState.resumeLink ? 'Edit Resume' : 'Upload Resume'}

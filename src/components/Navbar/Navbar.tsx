@@ -86,7 +86,7 @@ const Navbar = () => {
               <div className='flex flex-col gap-2'>
                 <label
                   htmlFor='resume-upload'
-                  className='py-1 px-8 bg-ankerblue text-white font-semibold w-fit ml-12 rounded-md cursor-pointer'
+                  className='py-1 px-8 bg-ankerblue text-white font-semibold w-fit ml-12 rounded-md cursor-pointer hover:scale-95 duration-300'
                 >
                   {userState.resumeLink ? 'Edit Resume' : 'Upload Resume'}
                 </label> 

@@ -98,8 +98,8 @@ const JobApplication: FC = () => {
               </div>
             
               <div className='flex flex-col gap-4 w-full'>
-                <div className='hidden md:grid grid-cols-6 items-center text-lg font-semibold px-7 py-3 bg-gray-100 rounded-md'>
-                  <p className='text-center'>Profile Image</p>
+                <div className='hidden md:grid grid-cols-5 items-center text-lg font-semibold px-7 py-3 bg-gray-100 rounded-md'>
+                  {/* <p className='text-center'>Profile Image</p> */}
                   <p className='text-center'>Full Name</p>
                   <p className='text-center'>Email Address</p>
                   <p className='text-center'>Mobile Number</p>
@@ -111,14 +111,14 @@ const JobApplication: FC = () => {
 
                 {(applications.length === 0) && (
                   <div className='flex justify-center items-center text-neutral-600 uppercase py-4'>
-                No Applications Yet
+                      No Applications Yet
                   </div>
                 )}
 
                 {applications.length !== 0 &&
                 applications.map((application) => (
-                  <div key={application.email} className='border-b flex flex-col md:grid md:grid-cols-6 md:items-center md:px-5 md:py-3'>
-                    <div className='hidden md:flex justify-center'>
+                  <div key={application.email} className='border-b flex flex-col md:grid md:grid-cols-5 md:items-center md:px-5 md:py-3'>
+                    {/* <div className='hidden md:flex justify-center'>
                       <Image
                         width={65}
                         height={65}
@@ -126,7 +126,7 @@ const JobApplication: FC = () => {
                         alt='Profile'
                         className='rounded-full w-[65px] h-[65px] object-cover aspect-square'
                       />
-                    </div>
+                    </div> */}
 
                     <div className='flex justify-between md:hidden pb-4'>
                       <div className='flex md:hidden flex-col gap-2'>
