@@ -70,6 +70,11 @@ const DashboardPage = () => {
     if(!event.target.files || event.target.files.length == 0) return;
   
     const file = event.target.files[0];
+
+    if(file.type !== 'application/pdf') {
+      toast.error('Only PDF files are allowed');
+      return;
+    }
   
     if(file.size > MAX_FILE_SIZE) {
       toast.error('File size exceeds the 3MB limit');

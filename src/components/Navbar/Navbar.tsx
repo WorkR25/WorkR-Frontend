@@ -3,7 +3,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent } from 'react';
+import toast from 'react-hot-toast';
 import { MdPendingActions } from 'react-icons/md';
 
 import { employerOptions, jobseekerOptions, MAX_FILE_SIZE } from '@/constants/constant';
@@ -21,7 +22,6 @@ import { USER_TYPE } from '@/utils/enums/UserType';
 const Navbar = () => {
   const userState = useAppSelector((state) => state.userState.user);
   const openJobForm = useAppSelector((state) => state.jobState.openJobForm);
-  const [errorMessage, setErrorMessage] = useState('');
   const dispatch = useAppDispatch();
   const router = useRouter();
   //   const [openJobForm, setOpenJobForm] = useState(false);
@@ -47,8 +47,13 @@ const Navbar = () => {
 
     const file = event.target.files[0];
 
+    if(file.type !== 'application/pdf') {
+      toast.error('Only PDF files are allowed');
+      return;
+    }
+
     if(file.size > MAX_FILE_SIZE) {
-      setErrorMessage('File size exceeds the 3MB limit');
+      toast.error('File size exceeds the 3MB limit');
       return;
     }
 
@@ -85,8 +90,6 @@ const Navbar = () => {
                 >
                   {userState.resumeLink ? 'Edit Resume' : 'Upload Resume'}
                 </label> 
-
-                {errorMessage && <p className='text-red-500 text-sm ml-9'>{errorMessage}</p>}
               </div>
             </div>
             {jobseekerOptions.map((Option, index) => (

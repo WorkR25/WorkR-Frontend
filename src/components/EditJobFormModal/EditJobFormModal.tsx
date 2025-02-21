@@ -211,6 +211,17 @@ const EditJobFormModal: FC<JobResponseObject> = (job) => {
       if(!event.target.files || event.target.files.length == 0) return;
   
       const file = event.target.files[0];
+
+      const allowedTypes = [ 
+        'image/jpeg',    
+        'image/png',      
+        'image/x-icon'
+      ];
+
+      if(!allowedTypes.includes(file.type)) {
+        toast.error('Only JPG, JPEG, PNG, and ICO files are allowed');
+        return;
+      }
     
       if(file.size > MAX_FILE_SIZE) {
         toast.error('File size exceeds the 3MB limit');
