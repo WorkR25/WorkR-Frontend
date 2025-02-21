@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import './globals.css';
 
 import type { Metadata } from 'next';
@@ -46,7 +47,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
+      <head>
+        <link
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&family=Poppins:wght@100..900&display=swap'
+        />
+      </head>
+      <body className='font-mulish'
       >
         <StoreProvider>
           <Toaster position='top-center' />
