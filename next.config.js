@@ -5,7 +5,7 @@ const nextConfig = {
   },
 
   reactStrictMode: false,
-  swcMinify: true,
+  // swcMinify: true,
 
   images: {
     remotePatterns: [
