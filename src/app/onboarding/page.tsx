@@ -357,7 +357,7 @@ export default function OnboardingPage() {
                   </div>
                   <div>
                     <input type='file' id='company-logo-upload' className='hidden' onChange={handleFileChange} />
-                    <label htmlFor='file-upload' className='flex cursor-pointer flex-row items-center md:py-3 md:px-4 py-2 px-3 justify-center gap-1 w-fit bg-white border-[1px] border-primaryblue rounded-md text-primaryblue hover:bg-subtleblue'>
+                    <label htmlFor='company-logo-upload' className='flex cursor-pointer flex-row items-center md:py-3 md:px-4 py-2 px-3 justify-center gap-1 w-fit bg-white border-[1px] border-primaryblue rounded-md text-primaryblue hover:bg-subtleblue'>
                       <p className='font-semibold text-sm'>{userState.companyLogo ? 'Edit Logo' : 'Upload Logo'}</p>
                     </label>
                   </div>
