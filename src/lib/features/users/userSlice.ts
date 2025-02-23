@@ -22,6 +22,7 @@ export const getUser = createAsyncThunk<AxiosResponse<UserResponse>, UserRequest
     toast.success('Welcome User');
     return response;
   } catch (error) {
+    console.log(error);
     const axiosError = error as AxiosError<ApiError>;
     if(axiosError.response?.data) {
       toast.error(axiosError.response.data.message);
