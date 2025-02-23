@@ -16,6 +16,7 @@ export const signup = createAsyncThunk<AxiosResponse, SignupDetails, { rejectVal
     toast.success('User Created Successfully, Please Sign in');
     return response;
   } catch (error) {
+    console.log(error);
     const axiosError = error as AxiosError<ApiError>;
     if(axiosError.response?.data) {
       toast.error(axiosError.response.data.message);
