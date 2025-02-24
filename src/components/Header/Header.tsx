@@ -23,6 +23,7 @@ import { clearToken } from '@/lib/features/users/authSlice';
 import { getUser, logout, uploadProfimeImage } from '@/lib/features/users/userSlice';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { UploadRequest, UserPayload, UserRequest } from '@/types';
+import { USER_STATUS } from '@/utils/enums/UserStatus';
 // import { USER_STATUS } from '@/utils/enums/UserStatus';
 import { USER_TYPE } from '@/utils/enums/UserType';
 // import { USER_STATUS } from '@/utils/enums/UserStatus';
@@ -64,10 +65,10 @@ const Header = () => {
         await loadUser();
       }
       
-      // if(userState?.userStatus == USER_STATUS.ACTIVE) {
-      //   router.push('/');
-      //   return;
-      // }
+      if(userState?.userStatus == USER_STATUS.ACTIVE) {
+        router.push('/');
+        return;
+      }
     }
     load();
     // eslint-disable-next-line react-hooks/exhaustive-deps
