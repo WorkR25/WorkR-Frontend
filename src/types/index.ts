@@ -118,7 +118,7 @@ export interface JobseekerRequest {
     linkedInProfile: string | undefined
     currentCompany: string | undefined
     currentOfficeLocation: string | undefined
-    yearsOfExperience: number | null
+    yearsOfExperience: number | undefined
     twitterProfile: string | undefined
     hometownState: string | undefined
 }
