@@ -38,7 +38,6 @@ const nextConfig = {
         hostname: '**',
       }
     ],
-    dangerouslyAllowAllDomains: true
   },
 
   // Uncoment to add domain whitelist
