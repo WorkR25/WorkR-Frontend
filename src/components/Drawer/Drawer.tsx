@@ -55,7 +55,7 @@ const Drawer = () => {
 
   return (
     <> 
-      {userType == USER_TYPE.EMPLOYER && <div className={clsx('md:hidden absolute h-[70px] w-[70px] rounded-full bottom-12 left-1/2 -translate-x-1/2 z-[100] flex justify-center items-center', selectPost ? 'bg-[#5e9eff]' : 'bg-[#fff]')}>
+      {userType == USER_TYPE.EMPLOYER && <div className={clsx('md:hidden fixed h-[70px] w-[70px] rounded-full bottom-12 left-1/2 -translate-x-1/2 z-[100] flex justify-center items-center', selectPost ? 'bg-[#5e9eff]' : 'bg-[#fff]')}>
         <div className={clsx(selectPost ? 'bg-[#0b66ef]' : 'bg-background', 'rounded-full aspect-square flex justify-center items-center h-[60px] w-[60px]')} onClick={handlePost}>
           <MdOutlineAddBox className={clsx('text-2xl font-bold', selectPost ?  'text-white' : 'text-black')} />
         </div>
