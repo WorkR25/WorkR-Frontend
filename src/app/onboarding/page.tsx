@@ -165,7 +165,7 @@ export default function OnboardingPage() {
           linkedInProfile: String(getValues('linkedInProfile')),
           headquarterLocation: String(getValues('headquarterLocation')),
           industryType: String(getValues('industryType')),
-          twitterProfile: getValues('twitterProfile') ? String(getValues('twitterProfile')) : null
+          twitterProfile: getValues('twitterProfile') ? String(getValues('twitterProfile')) : undefined
         };
 
         const res = await dispatch(updtaeEmployer(userRequestObject));

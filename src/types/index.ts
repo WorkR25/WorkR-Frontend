@@ -134,7 +134,7 @@ export interface EmployerRequest {
     linkedInProfile: string
     headquarterLocation: string
     industryType: string,
-    twitterProfile: string | null
+    twitterProfile: string | undefined
 }
 
 export interface EmployerResponseObject {
