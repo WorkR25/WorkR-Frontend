@@ -171,7 +171,7 @@ const JobCard: FC<JobResponseObject> = (job) => {
             </span>
           ))}
         </div>
-        <div className='sm:flex sm:order-2 order-1 sm:flex-row sm:flex-wrap sm:gap-0 gap-10 sm:justify-around sm:items-center grid grid-cols-3'>
+        <div className='sm:flex sm:order-2 order-1 sm:flex-row sm:flex-wrap sm:gap-0 gap-11 sm:justify-around sm:items-center grid grid-cols-2'>
           <div className='flex flex-col gap-1'>
             <div className='sm:text-sm text-xs text-slate-400 flex items-center gap-2 whitespace-nowrap'>
               <PiMoneyLight className='text-lg' />

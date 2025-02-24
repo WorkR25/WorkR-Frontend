@@ -38,7 +38,7 @@ const PendingJobsPageContent: FC = () => {
   }
 
   useEffect(() => {
-    if(user && user.role == USER_ROLE.ADMIN && !pendingjobs) getPendingJobs(userId);
+    if(user && user.role == USER_ROLE.ADMIN) getPendingJobs(userId);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
   return (

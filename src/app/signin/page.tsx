@@ -233,7 +233,7 @@ export default function LoginPage() {
             </button>
             <div className='w-full bg-gray-200 h-[1px]' />
             <p className='text-center text-sm'>
-              New to InterviewCall?{' '}
+              New to WorkR?{' '}
               <Link href='/signup' className='font-semibold text-sm underline'>
                 Create an account
               </Link>
