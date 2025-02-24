@@ -137,11 +137,11 @@ export default function OnboardingPage() {
           interestedDomain,
           userStatus: USER_STATUS.ACTIVE,
           instituteName: getValues('instituteName') ? String(getValues('instituteName')) : undefined,
-          yearOfGraduation: Number(getValues('yearOfGraduation')),
+          yearOfGraduation: Number(getValues('yearOfGraduation')) ? Number(getValues('yearOfGraduation')) : undefined,
           linkedInProfile: getValues('linkedInProfile') ? String(getValues('linkedInProfile')) : undefined,
           twitterProfile: getValues('twitterProfile') ? String(getValues('twitterProfile')) : undefined,
           currentCompany: getValues('currentCompany') ? String(getValues('currentCompany')) : undefined,
-          yearsOfExperience: Number(getValues('yearsOfExperience')),
+          yearsOfExperience: Number(getValues('yearsOfExperience')) ? Number(getValues('yearsOfExperience')) : undefined,
           hometownState: getValues('hometownState') ? String(getValues('hometownState')) : undefined,
           currentOfficeLocation: getValues('currentOfficeLocation') ? String(getValues('currentOfficeLocation')) : undefined
         };
