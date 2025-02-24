@@ -5,7 +5,7 @@ import StarterKit from '@tiptap/starter-kit';
 import clsx from 'clsx';
 import Image from 'next/image';
 import { useParams, useRouter } from 'next/navigation';
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { BsPeople } from 'react-icons/bs';
 import { CiCalendar } from 'react-icons/ci';
@@ -108,12 +108,12 @@ const FullTimeJob = () => {
   const params = useParams();
   const jobId = params.id as string;
 
-  useLayoutEffect(() => {
-    if(user && user.userType == USER_TYPE.EMPLOYER) {
-      router.push('/');
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  // useLayoutEffect(() => {
+  //   if(user && user.userType == USER_TYPE.EMPLOYER) {
+  //     router.push('/');
+  //   }
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [user]);
 
   const descriptionEditor = useEditor({
     extensions: [StarterKit],
