@@ -45,6 +45,7 @@ export const updateJobseeker = createAsyncThunk<AxiosResponse<UserResponse>, Job
     toast.success('Successfully Updated Your Details');
     return response;
   } catch (error) {
+    console.log(error);
     const axiosError = error as AxiosError<ApiError>;
     if(axiosError.response?.data) {
       toast.error(axiosError.response.data.message);
@@ -68,6 +69,7 @@ export const updtaeEmployer = createAsyncThunk<AxiosResponse<UserResponse>, Empl
     toast.success('Successfully Updated Your Details');
     return response;
   } catch (error) {
+    console.log(error);
     const axiosError = error as AxiosError<ApiError>;
     if(axiosError.response?.data) {
       toast.error(axiosError.response.data.message);
