@@ -160,7 +160,7 @@ export default function LoginPage() {
             <FaYoutube size={24} color='#525252' />
           </div>
           <div className='flex flex-row gap-4'>
-            <p className='text-neutral-600'>©️ InterviewCall 2024</p>
+            <p className='text-neutral-600'>©️ WorkR</p>
             <div className='h-full bg-black w-[2px]' />
             <a href='#' className='no-underline text-neutral-600'>
               Terms of Service

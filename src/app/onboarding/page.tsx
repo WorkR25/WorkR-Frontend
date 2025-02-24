@@ -136,14 +136,14 @@ export default function OnboardingPage() {
           jobseekerType,
           interestedDomain,
           userStatus: USER_STATUS.ACTIVE,
-          instituteName: getValues('instituteName') ? String(getValues('instituteName')) : null,
+          instituteName: getValues('instituteName') ? String(getValues('instituteName')) : undefined,
           yearOfGraduation: Number(getValues('yearOfGraduation')),
-          linkedInProfile: getValues('linkedInProfile') ? String(getValues('linkedInProfile')) : null,
-          twitterProfile: getValues('twitterProfile') ? String(getValues('twitterProfile')) : null,
-          currentCompany: getValues('currentCompany') ? String(getValues('currentCompany')) : null,
+          linkedInProfile: getValues('linkedInProfile') ? String(getValues('linkedInProfile')) : undefined,
+          twitterProfile: getValues('twitterProfile') ? String(getValues('twitterProfile')) : undefined,
+          currentCompany: getValues('currentCompany') ? String(getValues('currentCompany')) : undefined,
           yearsOfExperience: Number(getValues('yearsOfExperience')),
-          hometownState: getValues('hometownState') ? String(getValues('hometownState')) : null,
-          currentOfficeLocation: getValues('currentOfficeLocation') ? String(getValues('currentOfficeLocation')) : null
+          hometownState: getValues('hometownState') ? String(getValues('hometownState')) : undefined,
+          currentOfficeLocation: getValues('currentOfficeLocation') ? String(getValues('currentOfficeLocation')) : undefined
         };
       
         const res = await dispatch(updateJobseeker(userRequestObject));

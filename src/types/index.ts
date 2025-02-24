@@ -112,15 +112,15 @@ export interface JobseekerRequest {
     id: number
     jobseekerType: JOBSEEKER_TYPE,
     userStatus: USER_STATUS
-    interestedDomain: string[] | null
-    instituteName: string | null
-    yearOfGraduation: number | null
-    linkedInProfile: string | null
-    currentCompany: string | null
-    currentOfficeLocation: string | null
+    interestedDomain: string[] | undefined
+    instituteName: string | undefined
+    yearOfGraduation: number | undefined
+    linkedInProfile: string | undefined
+    currentCompany: string | undefined
+    currentOfficeLocation: string | undefined
     yearsOfExperience: number | null
-    twitterProfile: string | null
-    hometownState: string | null
+    twitterProfile: string | undefined
+    hometownState: string | undefined
 }
 
 export interface EmployerRequest {
