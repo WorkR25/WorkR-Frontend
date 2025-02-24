@@ -184,7 +184,6 @@ export const getJobWithId = createAsyncThunk<AxiosResponse<SingleJobRespone>, st
       }
     });
     toast.success('Successfully fetched the job');
-    console.log(response);
     return response;
   } catch (error) {
     const axiosError = error as AxiosError<ApiError>;
@@ -233,7 +232,6 @@ export const getAllFulltimeJobsByFilter = createAsyncThunk<AxiosResponse<JobResp
       }
     });
     toast.success('Successfully fetched all Fulltime jobs');
-    console.log(response);
     return response;
   } catch (error) {
     const axiosError = error as AxiosError<ApiError>;
