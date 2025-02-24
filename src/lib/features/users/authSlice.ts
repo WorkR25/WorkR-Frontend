@@ -36,6 +36,7 @@ export const signin = createAsyncThunk<AxiosResponse<SigninResponse>, SigninDeta
   } catch (error) {
     const axiosError = error as AxiosError<ApiError>;
     if(axiosError.response?.data) {
+      console.log(axiosError.response.data);
       toast.error(axiosError.response.data.message);
       return rejectWithValue(axiosError.response.data);
     }
